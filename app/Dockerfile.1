@@ -1,0 +1,7 @@
+FROM python:3.7.5-buster
+COPY ./requirements.txt /requirements.txt
+RUN pip install -r requirements.txt
+COPY . /
+ENV HOME /app
+WORKDIR /app
+CMD ["celery" ,"-A","task","worker","--loglevel=info"]

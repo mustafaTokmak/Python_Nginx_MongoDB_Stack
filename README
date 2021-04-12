@@ -1,0 +1,4 @@
+openssl req  -nodes -new -x509  -keyout nginx/key.key -out nginx/cert.crt
+mkdir mongo
+mkdir redis
+mkdir postgres
